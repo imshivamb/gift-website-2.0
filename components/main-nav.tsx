@@ -39,9 +39,8 @@ const MainNav: React.FC<MainNavProps> = ({ category }) => {
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-3 lg:w-[550px] ">
                   {categoryRoutes.slice(0, 9).map((route) => (
-                    <ListItem>
+                    <ListItem key={route.href}>
                       <Link
-                        key={route.href}
                         href={route.href}
                         className={cn(
                           "text-lg font-semibold transition-colors hover:text-black hover:scale-105",
@@ -62,9 +61,8 @@ const MainNav: React.FC<MainNavProps> = ({ category }) => {
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[550px] ">
                   {categoryRoutes.slice(3, 6).map((route) => (
-                    <ListItem>
+                    <ListItem key={route.href}>
                       <Link
-                        key={route.href}
                         href={route.href}
                         className={cn(
                           "text-lg font-semibold transition-colors hover:text-black hover:scale-105",
@@ -85,9 +83,8 @@ const MainNav: React.FC<MainNavProps> = ({ category }) => {
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[550px] ">
                   {categoryRoutes.slice(3, 6).map((route) => (
-                    <ListItem>
+                    <ListItem key={route.href}>
                       <Link
-                        key={route.href}
                         href={route.href}
                         className={cn(
                           "text-lg font-semibold transition-colors hover:text-black hover:scale-105",

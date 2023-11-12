@@ -94,9 +94,11 @@ const MobileNav: React.FC<MainNavProps> = ({ category }) => {
             {subMenuOpen.giftFor && (
               <ul className="">
                 {categoryRoutes.slice(3, 6).map((route) => (
-                  <li className="hover:bg-gray-100 py-1.5 flex flex-col items-start justify-between ml-5 font-semibold hover:cursor-pointer hover:text-black ">
+                  <li
+                    key={route.href}
+                    className="hover:bg-gray-100 py-1.5 flex flex-col items-start justify-between ml-5 font-semibold hover:cursor-pointer hover:text-black "
+                  >
                     <Link
-                      key={route.href}
                       href={route.href}
                       className={cn(
                         "text-[22px] font-semibold transition-colors hover:text-black hover:scale-105",
@@ -124,9 +126,11 @@ const MobileNav: React.FC<MainNavProps> = ({ category }) => {
             {subMenuOpen.giftByOccasion && (
               <ul className="">
                 {categoryRoutes.slice(3, 6).map((route) => (
-                  <li className="hover:bg-gray-100 flex py-1.5 flex-col items-start justify-between ml-5 font-semibold hover:cursor-pointer hover:text-black  ">
+                  <li
+                    key={route.href}
+                    className="hover:bg-gray-100 flex py-1.5 flex-col items-start justify-between ml-5 font-semibold hover:cursor-pointer hover:text-black  "
+                  >
                     <Link
-                      key={route.href}
                       href={route.href}
                       className={cn(
                         "text-[22px] font-semibold transition-colors hover:text-black hover:scale-105",
@@ -154,9 +158,11 @@ const MobileNav: React.FC<MainNavProps> = ({ category }) => {
             {subMenuOpen.giftGuides && (
               <ul className="">
                 {categoryRoutes.slice(3, 6).map((route) => (
-                  <li className="hover:bg-gray-100  py-1.5 flex flex-col items-start justify-between ml-5 font-semibold hover:cursor-pointer hover:text-black ">
+                  <li
+                    key={route.href}
+                    className="hover:bg-gray-100  py-1.5 flex flex-col items-start justify-between ml-5 font-semibold hover:cursor-pointer hover:text-black "
+                  >
                     <Link
-                      key={route.href}
                       href={route.href}
                       className={cn(
                         "text-[22px] font-semibold transition-colors hover:text-black hover:scale-105",
